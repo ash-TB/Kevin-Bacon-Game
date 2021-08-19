@@ -71,9 +71,6 @@ def main():
 
     path = shortest_path(source, target)
 
-    if path == -1:
-        print("target is source")
-
     elif path is None:
         print("Not connected.")
     else:
@@ -96,9 +93,6 @@ def shortest_path(source, target):
     """
     explored = [source] #keep track of explored nodes
     path = []
-    #check to see if source node is the target node
-    if(source == target):
-        return -1
 
     #create a queue
     queue = QueueFrontier()
